@@ -14,24 +14,28 @@ namespace MusicAPI.Data
 
         }
         public DbSet<Song> Songs { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Song>().HasData(
-                new Song
-                {
-                    Id = 1,
-                    Title = "Willow",
-                    Language = "Spanish",
-                    Duration = "4.35"
-                },
-                 new Song
-                 {
-                     Id = 2,
-                     Title = "Despacito",
-                     Language = "Spanish",
-                     Duration = "3.35"
-                 }
-                );
-        }
+        public DbSet<Artist> Artists { get; set; }
+        public DbSet<Album> Albums { get; set; }
+
+        // Seed script
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Song>().HasData(
+        //        new Song
+        //        {
+        //            Id = 1,
+        //            Title = "Willow",
+        //            Language = "Spanish",
+        //            Duration = "4.35"
+        //        },
+        //         new Song
+        //         {
+        //             Id = 2,
+        //             Title = "Despacito",
+        //             Language = "Spanish",
+        //             Duration = "3.35"
+        //         }
+        //        );
+        //}
     }
 }

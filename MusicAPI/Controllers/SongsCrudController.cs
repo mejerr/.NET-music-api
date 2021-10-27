@@ -14,10 +14,10 @@ namespace MusicAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SongsController : ControllerBase
+    public class SongsCrudController : ControllerBase
     {
         private ApiDbContext _dbContext;
-        public SongsController(ApiDbContext dbContext)
+        public SongsCrudController(ApiDbContext dbContext)
         {
             _dbContext = dbContext;
         }
